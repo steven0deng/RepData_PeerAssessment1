@@ -42,6 +42,16 @@ plot(strptime(str_pad(names(fivemin_mean),4,'left','0'), '%H%M'), fivemin_mean,
 
 ![](PA1_template_files/figure-html/unnamed-chunk-3-1.png)
 
+### Interval of Maximum Number of Steps
+
+```r
+names(fivemin_mean)[which.max(fivemin_mean)]
+```
+
+```
+## [1] "835"
+```
+
 ## Imputing missing values
 
 ### Total Number of `NA` Values
@@ -73,7 +83,7 @@ plot(H_imp, main = 'Histogram of total number of steps with imputed data',
 text(H_imp$mids, H_imp$counts/2, labels=H_imp$counts, cex= 0.7)
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-6-1.png)
+![](PA1_template_files/figure-html/unnamed-chunk-7-1.png)
 
 ### Original Mean and Median vs. Mean and Median with imputed data
 
@@ -101,5 +111,5 @@ xyplot(steps ~ interval | daycat, data = agg, type='l',
        layout = c(1, 2), xlab = 'Interval', ylab = 'Number of Steps')
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-8-1.png)
+![](PA1_template_files/figure-html/unnamed-chunk-9-1.png)
 

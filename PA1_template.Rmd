@@ -32,6 +32,11 @@ plot(strptime(str_pad(names(fivemin_mean),4,'left','0'), '%H%M'), fivemin_mean,
     xlab='Time', ylab='Steps')
 ```
 
+### Interval of Maximum Number of Steps
+```{r echo=TRUE}
+names(fivemin_mean)[which.max(fivemin_mean)]
+```
+
 ## Imputing missing values
 
 ### Total Number of `NA` Values
